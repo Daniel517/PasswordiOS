@@ -10,12 +10,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("LoginView")
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func loginPressed(_ sender: Any) {
+        print(usernameTextField.text ?? "None")
+        print(passwordTextField.text ?? "None")
+    }
+    
 
 }
 
