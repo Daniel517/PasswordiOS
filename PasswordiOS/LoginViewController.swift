@@ -20,8 +20,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func loginPressed(_ sender: Any) {
-        print(usernameTextField.text ?? "None")
-        print(passwordTextField.text ?? "None")
+        APIManager.validateUser(usernameTextField.text ?? "None" , passwordTextField.text ?? "None", completion: {
+            print("Completion done")
+        })
     }
     
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		FB5CB74A234D921A00BCB91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5CB748234D921A00BCB91B /* Main.storyboard */; };
 		FB5CB74C234D921B00BCB91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5CB74B234D921B00BCB91B /* Assets.xcassets */; };
 		FB5CB74F234D921B00BCB91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5CB74D234D921B00BCB91B /* LaunchScreen.storyboard */; };
+		FBB333F3234E2C34006482DB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F2234E2C34006482DB /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FB5CB74B234D921B00BCB91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB5CB74E234D921B00BCB91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB5CB750234D921B00BCB91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB333F2234E2C34006482DB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				063173BEAA2A1B2A0F854BC5 /* Pods-PasswordiOS.debug.xcconfig */,
 				4BE03EBDCF1961BDD8EF8DFF /* Pods-PasswordiOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				FB5CB74B234D921B00BCB91B /* Assets.xcassets */,
 				FB5CB74D234D921B00BCB91B /* LaunchScreen.storyboard */,
 				FB5CB750234D921B00BCB91B /* Info.plist */,
+				FBB333F2234E2C34006482DB /* APIManager.swift */,
 			);
 			path = PasswordiOS;
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB333F3234E2C34006482DB /* APIManager.swift in Sources */,
 				FB5CB747234D921A00BCB91B /* LoginViewController.swift in Sources */,
 				FB5CB743234D921A00BCB91B /* AppDelegate.swift in Sources */,
 				FB5CB745234D921A00BCB91B /* SceneDelegate.swift in Sources */,
