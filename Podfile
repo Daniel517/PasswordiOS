@@ -7,5 +7,6 @@ target 'PasswordiOS' do
 
   # Pods for PasswordiOS
 	pod 'TextFieldEffects'
+	pod 'Alamofire', '~> 5.0.0-rc.2'
 
 end
