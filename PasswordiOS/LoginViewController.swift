@@ -19,17 +19,23 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func loginPressed(_ sender: Any) {
-        let username = usernameTextField.text!
-        let password = passwordTextField.text!
-        APIManager.validateUser(username, password, completion: { userID in
+        let parameters : [String : Any] = [
+            "username" : usernameTextField.text!,
+            "password" : passwordTextField.text!
+        ]
+        APIManager.validateUser(parameters, completion: { userID in
             if(userID != 0) {
-                print("Validated")
                 DataTracker.setUserID(userID)
                 let sl = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Successful") as! SuccessfulLoginViewController
                 self.present(sl, animated: true, completion: nil)
             }
         })
-        print("Did not send")
     }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        let signUpView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpView") as! SignUpViewController
+        self.present(signUpView, animated: true, completion: nil)
+    }
+    
 }
 
