@@ -29,17 +29,25 @@ final class APIManager {
         }
     }
     
-    static func signUp(_ parametersIn : [String : Any], completion : @escaping () -> ()) {
+    static func signUp(_ parametersIn : [String : Any], completion : @escaping (_ status: Int) -> ()) {
         let apiCall = "/signup"
         let parameters : Parameters = parametersIn
+        print("SignUp")
+        var status : Int = 0
         AF.request(self.url + apiCall, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
                 case .failure(_):
-                    print(response.error!)
+                    status = 2
                 case .success(_):
-                    print(response.data!)
+                    let data = (response.value! as! NSDictionary)
+                    let keys = data.allKeys as! [String]
+                    for key in keys {
+                        if key == "errno" {
+                            status = 1
+                        }
+                    }
             }
-            completion()
+        completion(status)
         }
     }
 }

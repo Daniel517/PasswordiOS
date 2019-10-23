@@ -153,9 +153,6 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
-                                                        <color key="value" red="0.38891756529999999" green="0.59954959149999998" blue="0.93728905920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -192,6 +189,9 @@
                                         <rect key="frame" x="0.0" y="510.5" width="314" height="247.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpPressed:" destination="Fmb-eo-9a4" eventType="touchUpInside" id="yrn-VP-Jrg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -205,6 +205,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fnd-l2-6zp"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="I7M-it-mdg" id="koH-Vr-Zoh"/>
+                        <outlet property="passwordField" destination="qHh-t7-x1q" id="hAU-ev-RSH"/>
+                        <outlet property="signUpButton" destination="WVq-KH-LLe" id="ccq-Mb-PHg"/>
+                        <outlet property="usernameField" destination="KPF-wS-P9o" id="Jtn-rh-YaU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3O-Nw-1Mo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,15 +224,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-53-hjs">
-                                <rect key="frame" x="186" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-53-hjs">
+                                <rect key="frame" x="165" y="437.5" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bTr-53-hjs" firstAttribute="centerX" secondItem="BJg-vJ-8yo" secondAttribute="centerX" id="Q5i-jr-vb1"/>
+                            <constraint firstItem="bTr-53-hjs" firstAttribute="centerY" secondItem="BJg-vJ-8yo" secondAttribute="centerY" id="T2U-zX-XJP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V4Y-G9-Bye"/>
                     </view>
                     <connections>
