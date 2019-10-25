@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CryptoSwift
 
 class LoginViewController: UIViewController {
 
@@ -21,13 +22,16 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         let parameters : [String : Any] = [
             "username" : usernameTextField.text!,
-            "password" : passwordTextField.text!
+            "password" : passwordTextField.text!.sha512()
         ]
         APIManager.validateUser(parameters, completion: { userID in
             if(userID != 0) {
                 DataTracker.setUserID(userID)
                 let sl = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Successful") as! SuccessfulLoginViewController
                 self.present(sl, animated: true, completion: nil)
+            }
+            else {
+                self.loginFailedAlert()
             }
         })
     }
@@ -37,5 +41,10 @@ class LoginViewController: UIViewController {
         self.present(signUpView, animated: true, completion: nil)
     }
     
+    func loginFailedAlert() {
+        let alert = UIAlertController(title: "Failed to login", message: "Check internet connection or credentials", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 }
 

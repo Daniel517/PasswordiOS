@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import CryptoSwift
 
 class SignUpViewController : UIViewController {
     
@@ -22,12 +23,17 @@ class SignUpViewController : UIViewController {
     
     @IBAction func signUpPressed(_ sender: Any) {
         let parameters : [String : Any] = [
-            "username" : "User1510",
-            "password" : "User1"
+            "username" : usernameField.text!,
+            "password" : passwordField.text!.sha512()
         ]
         if passwordConfirmed() {
             APIManager.signUp(parameters, completion: { status in
-                print("completed")
+                switch status {
+                case 0: self.successfulSignUpAlert(); break;
+                case 1: self.duplicationAlert(); break;
+                case 2: print("failure"); break; //Try again later message
+                default: break;
+                }
             })
         }
     }
@@ -39,6 +45,30 @@ class SignUpViewController : UIViewController {
         if passwordField.text == confirmPasswordField.text {
             return true
         }
+        else {
+            self.differentPasswordsAlert()
+        }
         return false
+    }
+    
+    func differentPasswordsAlert() {
+        let alert = UIAlertController(title: "Passwords do not match", message: "Make sure passwords match for each field", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func successfulSignUpAlert() {
+        let alert = UIAlertController(title: "Account created successfully!", message: "Continue to login", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Login", style: .default, handler: { action in
+            let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            self.present(login, animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true)
+    }
+    
+    func duplicationAlert() {
+        let alert = UIAlertController(title: "Failure to create account", message: "Username has already been taken", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }

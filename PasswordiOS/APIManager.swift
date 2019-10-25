@@ -32,7 +32,6 @@ final class APIManager {
     static func signUp(_ parametersIn : [String : Any], completion : @escaping (_ status: Int) -> ()) {
         let apiCall = "/signup"
         let parameters : Parameters = parametersIn
-        print("SignUp")
         var status : Int = 0
         AF.request(self.url + apiCall, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
