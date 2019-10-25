@@ -216,30 +216,37 @@
             </objects>
             <point key="canvasLocation" x="-58" y="809"/>
         </scene>
-        <!--Successful Login View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="rOh-5y-IAx">
             <objects>
-                <viewController storyboardIdentifier="Successful" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJy-41-JTA" customClass="SuccessfulLoginViewController" customModule="PasswordiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJy-41-JTA" customClass="MainMenuViewController" customModule="PasswordiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BJg-vJ-8yo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-53-hjs">
-                                <rect key="frame" x="165" y="437.5" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-UU-abY">
+                                <rect key="frame" x="132" y="427.5" width="150" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmM-Yy-hGG">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="My Passwords"/>
+                                        <connections>
+                                            <action selector="pressedMyPasswords:" destination="cJy-41-JTA" eventType="touchUpInside" id="ojJ-bx-YEO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bTr-53-hjs" firstAttribute="centerX" secondItem="BJg-vJ-8yo" secondAttribute="centerX" id="Q5i-jr-vb1"/>
-                            <constraint firstItem="bTr-53-hjs" firstAttribute="centerY" secondItem="BJg-vJ-8yo" secondAttribute="centerY" id="T2U-zX-XJP"/>
+                            <constraint firstItem="xFB-UU-abY" firstAttribute="centerY" secondItem="BJg-vJ-8yo" secondAttribute="centerY" id="qQD-aj-WFr"/>
+                            <constraint firstItem="xFB-UU-abY" firstAttribute="centerX" secondItem="BJg-vJ-8yo" secondAttribute="centerX" id="xf0-Tj-HiY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V4Y-G9-Bye"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="bTr-53-hjs" id="9TD-cU-jiK"/>
+                        <outlet property="myPasswordsButton" destination="gmM-Yy-hGG" id="MxV-U0-GDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyM-GR-6Fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

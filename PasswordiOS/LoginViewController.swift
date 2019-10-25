@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         APIManager.validateUser(parameters, completion: { userID in
             if(userID != 0) {
                 DataTracker.setUserID(userID)
-                let sl = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Successful") as! SuccessfulLoginViewController
+                let sl = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenu") as! MainMenuViewController
                 self.present(sl, animated: true, completion: nil)
             }
             else {

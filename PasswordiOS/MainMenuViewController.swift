@@ -8,13 +8,14 @@
 
 import UIKit
 
-class SuccessfulLoginViewController : UIViewController {
+class MainMenuViewController : UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var myPasswordsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Succesfully signed in as \(String(describing: DataTracker.getUserID))"
-        print("Successful View")
+    }
+    
+    @IBAction func pressedMyPasswords(_ sender: Any) {
     }
 }

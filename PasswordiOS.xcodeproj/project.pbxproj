@@ -16,7 +16,7 @@
 		FB5CB74F234D921B00BCB91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5CB74D234D921B00BCB91B /* LaunchScreen.storyboard */; };
 		FBB333F3234E2C34006482DB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F2234E2C34006482DB /* APIManager.swift */; };
 		FBB333F5234E4BA5006482DB /* DataTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F4234E4BA5006482DB /* DataTracker.swift */; };
-		FBB333F7234E56D3006482DB /* SuccessfulLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F6234E56D3006482DB /* SuccessfulLoginViewController.swift */; };
+		FBB333F7234E56D3006482DB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F6234E56D3006482DB /* MainMenuViewController.swift */; };
 		FBDE290F2354B92700C2198A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE290E2354B92700C2198A /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		FB5CB750234D921B00BCB91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBB333F2234E2C34006482DB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FBB333F4234E4BA5006482DB /* DataTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTracker.swift; sourceTree = "<group>"; };
-		FBB333F6234E56D3006482DB /* SuccessfulLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulLoginViewController.swift; sourceTree = "<group>"; };
+		FBB333F6234E56D3006482DB /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		FBDE290E2354B92700C2198A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +97,7 @@
 				FB5CB750234D921B00BCB91B /* Info.plist */,
 				FBB333F2234E2C34006482DB /* APIManager.swift */,
 				FBB333F4234E4BA5006482DB /* DataTracker.swift */,
-				FBB333F6234E56D3006482DB /* SuccessfulLoginViewController.swift */,
+				FBB333F6234E56D3006482DB /* MainMenuViewController.swift */,
 				FBDE290E2354B92700C2198A /* SignUpViewController.swift */,
 			);
 			path = PasswordiOS;
@@ -221,7 +221,7 @@
 				FBB333F5234E4BA5006482DB /* DataTracker.swift in Sources */,
 				FBDE290F2354B92700C2198A /* SignUpViewController.swift in Sources */,
 				FBB333F3234E2C34006482DB /* APIManager.swift in Sources */,
-				FBB333F7234E56D3006482DB /* SuccessfulLoginViewController.swift in Sources */,
+				FBB333F7234E56D3006482DB /* MainMenuViewController.swift in Sources */,
 				FB5CB747234D921A00BCB91B /* LoginViewController.swift in Sources */,
 				FB5CB743234D921A00BCB91B /* AppDelegate.swift in Sources */,
 				FB5CB745234D921A00BCB91B /* SceneDelegate.swift in Sources */,
