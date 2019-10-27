@@ -46,7 +46,63 @@ final class APIManager {
                         }
                     }
             }
-        completion(status)
+            completion(status)
+        }
+    }
+    
+    static func savePassword(_ password : [String : Any], completion : @escaping (_ status : Int) -> ()) {
+        let apiCall = "/savePassword"
+        let parameters : Parameters = password
+        var status : Int = 0
+        AF.request(self.url + apiCall, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+                case .failure(_):
+                    status = 2
+                case .success(_):
+                    let data = (response.value! as! NSDictionary)
+                    let keys = data.allKeys as! [String]
+                    for key in keys {
+                        if key == "errno" {
+                            status = 1
+                        }
+                    }
+            }
+            completion(status)
+        }
+    }
+    
+    static func getPasswords(_ userID : [String: Any], completion : @escaping (_ passwords : [NSDictionary]) -> ()) {
+        let apiCall = "/getPasswords"
+        let parameters : Parameters = userID
+        AF.request(self.url + apiCall, method:  .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+                case .failure(_):
+                    completion([])
+                case .success(_):
+                    let passwords = (response.value! as! [NSDictionary])
+                    completion(passwords)
+            }
+        }
+    }
+    
+    static func deletePasswords(_ password : [String : Any], completion : @escaping (_ status : Int) -> ()) {
+        let apiCall = "/deletePassword"
+        let parameters : Parameters = password
+        AF.request(self.url + apiCall, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            var status : Int = 0
+            switch response.result {
+                case .failure(_):
+                    status = 1
+                case .success(_):
+                    let data = (response.value! as! NSDictionary)
+                    let keys = data.allKeys as! [String]
+                    for key in keys {
+                        if key == "errno" {
+                            status = 1
+                        }
+                    }
+            }
+            completion(status)
         }
     }
 }
