@@ -8,6 +8,7 @@
 
 import SwiftUI
 import TextFieldEffects
+import CryptoSwift
 
 class AddPasswordViewController : UIViewController {
     

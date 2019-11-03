@@ -92,21 +92,46 @@
 		FB5CB741234D921A00BCB91B /* PasswordiOS */ = {
 			isa = PBXGroup;
 			children = (
-				FB5CB742234D921A00BCB91B /* AppDelegate.swift */,
-				FB5CB744234D921A00BCB91B /* SceneDelegate.swift */,
-				FB5CB746234D921A00BCB91B /* LoginViewController.swift */,
-				FB5CB748234D921A00BCB91B /* Main.storyboard */,
 				FB5CB74B234D921B00BCB91B /* Assets.xcassets */,
-				FB5CB74D234D921B00BCB91B /* LaunchScreen.storyboard */,
-				FB5CB750234D921B00BCB91B /* Info.plist */,
-				FBB333F2234E2C34006482DB /* APIManager.swift */,
-				FBB333F4234E4BA5006482DB /* DataTracker.swift */,
-				FBB333F6234E56D3006482DB /* MainMenuViewController.swift */,
-				FBDE290E2354B92700C2198A /* SignUpViewController.swift */,
-				FB9A5BD42363655400E41930 /* PasswordsViewController.swift */,
-				FB9A5BD8236602BC00E41930 /* AddPasswordViewController.swift */,
+				FB63C448236F503D002F7C7C /* System */,
+				FB63C449236F5070002F7C7C /* Managers */,
+				FB63C447236F4FC5002F7C7C /* UI */,
 			);
 			path = PasswordiOS;
+			sourceTree = "<group>";
+		};
+		FB63C447236F4FC5002F7C7C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FB9A5BD8236602BC00E41930 /* AddPasswordViewController.swift */,
+				FB5CB74D234D921B00BCB91B /* LaunchScreen.storyboard */,
+				FB5CB746234D921A00BCB91B /* LoginViewController.swift */,
+				FB5CB748234D921A00BCB91B /* Main.storyboard */,
+				FBB333F6234E56D3006482DB /* MainMenuViewController.swift */,
+				FB9A5BD42363655400E41930 /* PasswordsViewController.swift */,
+				FBDE290E2354B92700C2198A /* SignUpViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FB63C448236F503D002F7C7C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				FB5CB742234D921A00BCB91B /* AppDelegate.swift */,
+				FB5CB750234D921B00BCB91B /* Info.plist */,
+				FB5CB744234D921A00BCB91B /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+			wrapsLines = 0;
+		};
+		FB63C449236F5070002F7C7C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FBB333F2234E2C34006482DB /* APIManager.swift */,
+				FBB333F4234E4BA5006482DB /* DataTracker.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDFU525866;
-				INFOPLIST_FILE = PasswordiOS/Info.plist;
+				INFOPLIST_FILE = PasswordiOS/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDFU525866;
-				INFOPLIST_FILE = PasswordiOS/Info.plist;
+				INFOPLIST_FILE = PasswordiOS/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
