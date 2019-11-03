@@ -19,6 +19,7 @@
 		FBB333F3234E2C34006482DB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F2234E2C34006482DB /* APIManager.swift */; };
 		FBB333F5234E4BA5006482DB /* DataTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F4234E4BA5006482DB /* DataTracker.swift */; };
 		FBB333F7234E56D3006482DB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB333F6234E56D3006482DB /* MainMenuViewController.swift */; };
+		FBDCC95F236F615E003C3D6D /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCC95E236F615E003C3D6D /* SecurityManager.swift */; };
 		FBDE290F2354B92700C2198A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE290E2354B92700C2198A /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		FBB333F2234E2C34006482DB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FBB333F4234E4BA5006482DB /* DataTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTracker.swift; sourceTree = "<group>"; };
 		FBB333F6234E56D3006482DB /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		FBDCC95E236F615E003C3D6D /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
 		FBDE290E2354B92700C2198A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 			children = (
 				FBB333F2234E2C34006482DB /* APIManager.swift */,
 				FBB333F4234E4BA5006482DB /* DataTracker.swift */,
+				FBDCC95E236F615E003C3D6D /* SecurityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				FB5CB747234D921A00BCB91B /* LoginViewController.swift in Sources */,
 				FB5CB743234D921A00BCB91B /* AppDelegate.swift in Sources */,
 				FB5CB745234D921A00BCB91B /* SceneDelegate.swift in Sources */,
+				FBDCC95F236F615E003C3D6D /* SecurityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

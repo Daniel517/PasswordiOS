@@ -24,7 +24,7 @@ class AddPasswordViewController : UIViewController {
         if passwordConfirmed() {
             let password : [String : Any] = [
                 "user_id" : DataTracker.getUserID(),
-                "password" : passwordTextField.text!,
+                "password" : SecurityManager.encrypt(passwordTextField.text!),
                 "description" : descriptionTextField.text!
             ]
             APIManager.savePassword(password, completion: { status in
@@ -35,6 +35,11 @@ class AddPasswordViewController : UIViewController {
             })
         }
         
+    }
+    
+    func encryptPassword(_ password : String) -> String {
+        
+        return ""
     }
     
     func passwordConfirmed() -> Bool {

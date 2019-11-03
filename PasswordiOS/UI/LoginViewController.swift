@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CryptoSwift
 
 class LoginViewController: UIViewController {
 
