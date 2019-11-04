@@ -34,7 +34,8 @@ class PasswordsViewController : UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell") as! MGSwipeTableCell
-        cell.textLabel!.text = (DataTracker.passwords[indexPath.row].object(forKey: "password")! as! String)
+        let cipherText = DataTracker.passwords[indexPath.row].object(forKey: "password")! as! String
+        cell.textLabel!.text = SecurityManager.decrypt(cipherText)
         cell.detailTextLabel!.text = (DataTracker.passwords[indexPath.row].object(forKey: "description")! as! String)
         cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: .red, callback: {
             (sender: MGSwipeTableCell!) -> Bool in
@@ -43,6 +44,7 @@ class PasswordsViewController : UIViewController, UITableViewDataSource, UITable
             })]
         return cell
     }
+    
     @IBAction func addPasswordPressed(_ sender: Any) {
         let addPassword = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddPassword") as! AddPasswordViewController
         self.present(addPassword, animated: true, completion: nil)

@@ -28,7 +28,7 @@ final class SecurityManager {
     
     static func decrypt(_ cipherText : String) -> String {
         let aes = try! AES(key: key, blockMode: CBC(iv: iv))
-        let decryptText = try! aes.decrypt(Array(cipherText.utf8))
+        let decryptText = try! aes.decrypt(Array(Data(hex: cipherText)))
         return String(bytes: decryptText, encoding: .utf8)!
     }
 }
