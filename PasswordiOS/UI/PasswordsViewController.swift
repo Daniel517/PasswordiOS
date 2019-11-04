@@ -41,8 +41,20 @@ class PasswordsViewController : UIViewController, UITableViewDataSource, UITable
             (sender: MGSwipeTableCell!) -> Bool in
             self.deleteStorePassword(indexPath.row)
             return true
-            })]
+            }), MGSwipeButton(title: "Edit", backgroundColor: .green, callback: {
+                (sender: MGSwipeTableCell!) -> Bool in
+                return true
+            }), MGSwipeButton(title: "Copy", backgroundColor: .blue, callback: {
+                (sender: MGSwipeTableCell!) -> Bool in
+                UIPasteboard.general.string = cell.textLabel?.text
+                return true
+            })
+        ]
         return cell
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addPasswordPressed(_ sender: Any) {
