@@ -60,8 +60,8 @@ class SignUpViewController : UIViewController {
     func successfulSignUpAlert() {
         let alert = UIAlertController(title: "Account created successfully!", message: "Continue to login", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Login", style: .default, handler: { action in
-            let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
-            self.present(login, animated: true, completion: nil)
+            let loginVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            self.present(loginVC, animated: true, completion: nil)
         }))
         self.present(alert, animated: true)
     }

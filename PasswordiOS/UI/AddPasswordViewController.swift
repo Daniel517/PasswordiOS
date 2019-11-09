@@ -64,8 +64,8 @@ class AddPasswordViewController : UIViewController {
     func successfulSaveAlert() {
         let alert = UIAlertController(title: "Password saved successfully!", message: "Return to Passwords", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Passwords", style: .default, handler: { action in
-            let passwords = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Passwords") as! PasswordsViewController
-            self.present(passwords, animated: true, completion: nil)
+            let passwordsVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Passwords") as! PasswordsViewController
+            self.present(passwordsVC, animated: true, completion: nil)
         }))
         self.present(alert, animated: true)
     }

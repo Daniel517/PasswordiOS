@@ -54,12 +54,13 @@ class PasswordsViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func backPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let mainMenuVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenu") as! MainMenuViewController
+        self.present(mainMenuVC, animated: true, completion: nil)
     }
     
     @IBAction func addPasswordPressed(_ sender: Any) {
-        let addPassword = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddPassword") as! AddPasswordViewController
-        self.present(addPassword, animated: true, completion: nil)
+        let addPasswordVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddPassword") as! AddPasswordViewController
+        self.present(addPasswordVC, animated: true, completion: nil)
     }
     
     func deleteStorePassword(_ index: Int) {

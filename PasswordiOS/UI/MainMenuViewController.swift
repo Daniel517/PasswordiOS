@@ -17,7 +17,7 @@ class MainMenuViewController : UIViewController {
     }
     
     @IBAction func pressedMyPasswords(_ sender: Any) {
-        let passwords = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Passwords") as! PasswordsViewController
-        self.present(passwords, animated: true, completion: nil)
+        let passwordsVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Passwords") as! PasswordsViewController
+        self.present(passwordsVC, animated: true, completion: nil)
     }
 }

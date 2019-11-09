@@ -26,8 +26,9 @@ class LoginViewController: UIViewController {
         APIManager.validateUser(parameters, completion: { userID in
             if(userID != 0) {
                 DataTracker.setUserID(userID)
-                let sl = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenu") as! MainMenuViewController
-                self.present(sl, animated: true, completion: nil)
+                SecurityManager.setKeyAndIV(self.usernameTextField.text!, self.passwordTextField.text!)
+                let mainMenuVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenu") as! MainMenuViewController
+                self.present(mainMenuVC, animated: true, completion: nil)
             }
             else {
                 self.loginFailedAlert()
@@ -36,8 +37,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: Any) {
-        let signUpView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpView") as! SignUpViewController
-        self.present(signUpView, animated: true, completion: nil)
+        let signUpVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpView") as! SignUpViewController
+        self.present(signUpVC, animated: true, completion: nil)
     }
     
     func loginFailedAlert() {
