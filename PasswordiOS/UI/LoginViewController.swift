@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         ]
         APIManager.validateUser(parameters, completion: { userID in
             if(userID != 0) {
-                DataTracker.setUserID(userID)
+                DataTracker.userID = userID
                 SecurityManager.setKeyAndIV(self.usernameTextField.text!, self.passwordTextField.text!)
                 let mainMenuVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenu") as! MainMenuViewController
                 self.present(mainMenuVC, animated: true, completion: nil)

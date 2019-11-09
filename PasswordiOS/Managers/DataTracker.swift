@@ -10,14 +10,7 @@ import Foundation
 
 final class DataTracker {
     
-    static private var userID = 0
+    static var userID = 0
     static var passwords : [NSDictionary] = []
     
-    static func getUserID() -> Int {
-        return self.userID
-    }
-    
-    static func setUserID(_ userID : Int) {
-        self.userID = userID
-    }
 }

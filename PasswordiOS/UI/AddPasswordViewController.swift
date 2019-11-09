@@ -23,7 +23,7 @@ class AddPasswordViewController : UIViewController {
     @IBAction func addPasswordPressed(_ sender: Any) {
         if passwordConfirmed() {
             let password : [String : Any] = [
-                "user_id" : DataTracker.getUserID(),
+                "user_id" : DataTracker.userID,
                 "password" : SecurityManager.encrypt(passwordTextField.text!),
                 "description" : descriptionTextField.text!
             ]

@@ -16,7 +16,7 @@ class PasswordsViewController : UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let parameter : [String : Any] = [
-            "user_id" : DataTracker.getUserID()
+            "user_id" : DataTracker.userID
         ]
         APIManager.getPasswords(parameter, completion: { passwords in
             DataTracker.passwords = passwords

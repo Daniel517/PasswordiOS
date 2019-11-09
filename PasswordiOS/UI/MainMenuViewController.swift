@@ -20,4 +20,11 @@ class MainMenuViewController : UIViewController {
         let passwordsVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Passwords") as! PasswordsViewController
         self.present(passwordsVC, animated: true, completion: nil)
     }
+    
+    @IBAction func logoutPressed(_ sender: Any) {
+        DataTracker.userID = 0
+        let loginVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        self.present(loginVC, animated: true, completion: nil)
+    }
+    
 }
